@@ -1,0 +1,99 @@
+.footer {
+  background-color: #eeeeee;
+  padding: 57px 0;
+}
+.row-1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 50px;
+
+  & h3 {
+    font-size: 0.7rem;
+    font-family: $primary-font-bold;
+    color: $text-grey;
+    margin-bottom: 20px;
+  }
+  & ul {
+    margin-bottom: 50px;
+  }
+  & li {
+    font-size: 0.6rem;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    & a {
+      color: $text-dark;
+      font-family: $primary-font-medium;
+      text-decoration: none;
+      transition: all 0.2s linear;
+      & span:after {
+        content: "\02c3";
+      }
+    }
+    & a:hover {
+      color: $text-grey;
+    }
+  }
+}
+
+.footer-row__col {
+  padding-right: 40px !important;
+}
+
+.row-2 {
+  text-align: center;
+  & p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  & p a {
+    text-decoration: underline;
+    color: $blue-color;
+  }
+  & p a:hover {
+    color: $text-dark;
+  }
+}
+.footer__social a {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  background-color: $text-dark;
+
+  font-size: 16px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.2s;
+  margin-bottom: 30px;
+  &:hover {
+    background-color: rgb(77, 77, 77);
+  }
+}
+.fa-snapchat {
+  color: #fff;
+}
+.final-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: $primary-font-medium;
+  & a {
+    color: #3e8ccf;
+    margin: 0 5px;
+    text-decoration: none;
+    transition: all 0.3s;
+    &:hover {
+      color: #23527c;
+    }
+  }
+}
+footer .icon-chevron-right {
+  font-size: 13px;
+  margin: 2px 0 0 -2px;
+}

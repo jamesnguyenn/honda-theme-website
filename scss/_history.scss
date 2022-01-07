@@ -1,0 +1,51 @@
+.history-header {
+  text-align: center;
+  position: relative;
+  & h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: $primary-font-bold;
+    letter-spacing: 0.1em;
+    padding-top: 65px;
+    padding-bottom: 30px;
+  }
+  & p {
+    font-size: 1rem;
+    color: #000;
+    width: 100%;
+    margin: 0 auto 18px;
+    line-height: 22px;
+  }
+}
+
+.history-header-title {
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-top: 0;
+  width: 600px;
+  & h2 {
+    text-transform: uppercase;
+  }
+  & a {
+    color: #000;
+    font-size: 1rem;
+    font-family: $primary-font-bold;
+    margin-bottom: 30px;
+    position: relative;
+    text-decoration: none;
+  }
+  & a:after {
+    font-family: $primary-font-bold;
+    content: "\02C3";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+    transform: translateX(70%);
+  }
+}

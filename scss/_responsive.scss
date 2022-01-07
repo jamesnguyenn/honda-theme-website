@@ -1,0 +1,125 @@
+@media screen and (max-width: 767.98px) {
+  .header {
+    transform: translateX(-55px) scale(0.7);
+  }
+  .menu-link span {
+    display: none;
+  }
+  .nav-bars .left a,
+  .nav-bars .right a {
+    display: none;
+  }
+  .header .nav-bars__item .search-bar {
+    margin-left: 15px;
+  }
+  .slider .carousel-indicators {
+    transform: translate(26%, -10%) !important;
+    & li {
+      margin-right: 5px;
+    }
+  }
+
+  .item {
+    padding: 20px !important;
+    & span {
+      font-size: 0.5rem;
+    }
+    & a {
+      font-size: 0.5rem;
+    }
+  }
+  .item__icon {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 100%;
+    text-align: center;
+    margin-right: 5px;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "h1 h1 h2 h2"
+      "h3 h3 h4 h4"
+      "h5 h5 h6 h6"
+      "h7 h7 h8 h8"
+      "h9 h9 h10 h10"
+      "h11 h11 h12 h12"
+      "h13 h13 h14 h14"
+      "h15 h15 h16 h16";
+  }
+  .hero-item:nth-child(12) {
+    & span::before {
+      display: block;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 100%) rotate(-90deg);
+      border-right: 20px solid $red-color;
+    }
+  }
+  .hero-item:nth-child(13) {
+    grid-area: h14;
+  }
+  .hero-item:nth-child(14) {
+    grid-area: h13;
+  }
+  .hero-item:nth-child(15) {
+    & span::before {
+      display: block;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%) rotate(90deg);
+      border-right: 20px solid #fff;
+    }
+  }
+  .about-lists__item {
+    --collumn: 1;
+  }
+  .history-header-title {
+    & h2 {
+      font-size: 0.8rem;
+      padding: 30px 0;
+    }
+    & p {
+      font-size: 0.3rem;
+      line-height: 0;
+    }
+    & a {
+      font-size: 0.4rem;
+    }
+  }
+  .history-header-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    width: 600px;
+  }
+  .collection-item {
+    --column: 1;
+  }
+  .row-1 {
+    flex-wrap: wrap;
+  }
+  .row-2 {
+    padding: 20px 40px;
+  }
+  .footer__social {
+    margin-bottom: 20px;
+  }
+  .footer__social a {
+    margin-bottom: 0;
+  }
+  .row-2 p a {
+    margin-bottom: 20px;
+  }
+  .sticky-menu {
+    left: -100%;
+  }
+  .run-menu {
+    left: -6%;
+  }
+}

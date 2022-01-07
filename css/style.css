@@ -1,0 +1,1070 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  font-family: "Avenir Next Cyr", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 35px;
+  font-size: 1.6rem;
+  background-color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+hr {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  padding: 15px 25px;
+  background-color: #fff;
+}
+
+.search-bar {
+  cursor: pointer;
+}
+
+.sticky-menu {
+  position: absolute;
+  top: 100%;
+  left: -50%;
+  width: 350px;
+  height: 100vh;
+  background-color: #fff;
+  transition: all 0.4s linear;
+}
+.sticky-menu ul li {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-size: 0.6rem;
+  padding: 30px;
+  border-bottom: 1px solid #eee;
+}
+.sticky-menu ul li input {
+  display: none;
+}
+.sticky-menu ul li i {
+  margin-right: 10px;
+}
+
+.scroll-body {
+  overflow: hidden;
+}
+
+.run-menu {
+  left: 0;
+}
+
+.nav-bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bars .left a,
+.nav-bars .right a {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-weight: 600;
+  color: #000;
+  font-size: 0.6rem;
+  text-decoration: none;
+}
+
+.nav-bars .center {
+  width: 164px;
+  height: 35px;
+}
+
+.nav-bars .center .logo-link {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-bars .left .menu-link,
+.nav-bars .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .nav-bars__item .menu-bar {
+  background: url(../img/icons.webp) 0 -30px;
+  display: inline-block;
+  width: 35px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.header .nav-bars__item .search-bar {
+  background: url(../img/icons.webp) 0 0px;
+  display: inline-block;
+  width: 35px;
+  height: 30px;
+  margin-left: 60px;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  width: 100%;
+}
+
+.item:first-child {
+  padding: 30px 100px 30px 50px;
+  background-color: #ff9600;
+  clip-path: polygon(0 0, 100% 0, 89% 100%, 0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.item__icon {
+  background: #fff;
+  color: #ff9600;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 100%;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.item:nth-child(2) {
+  padding: 30px 0 30px 70px;
+}
+
+.item:nth-child(2) span {
+  margin-right: 25px;
+}
+
+.item:nth-child(2) a {
+  color: #ff9600;
+  position: relative;
+}
+
+.item:nth-child(2) a::after {
+  content: "˃";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -50%;
+  transform: translateX(60%);
+}
+
+.slider .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  background-color: #c0c0c0;
+}
+
+.slider .carousel-indicators {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  top: 50%;
+  transform: translate(32%, -10%) !important;
+}
+
+.slider .carousel-indicators li {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #8f8f8f;
+  border: 0;
+  display: block;
+  outline: 0;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+  font-size: inherit;
+  line-height: inherit;
+  margin-right: 15px;
+}
+
+.slider .carousel-indicators .active {
+  background-color: #ff9600 !important;
+}
+
+.carousel-section {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.carousel-section .carousel-indicators {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  top: 100%;
+  left: -17%;
+  transform: translateY(80%);
+}
+
+.carousel-section .carousel-indicators li {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #8f8f8f;
+  border: 0;
+  display: block;
+  outline: 0;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+  font-size: inherit;
+  line-height: inherit;
+  margin-right: 15px;
+  transition: all 0.4s linear;
+}
+
+.carousel .carousel-indicators li:hover {
+  background-color: #cc0001;
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #cc0001;
+}
+
+.carousel-section .carousel-control-next {
+  background-color: #000;
+  right: 0;
+  width: 35px;
+  height: 50px;
+  top: calc(50% - 30px);
+}
+
+.carousel-section .carousel-control-prev {
+  background-color: #000;
+  left: 0;
+  width: 35px;
+  height: 50px;
+  top: calc(50% - 30px);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "h1 h2 h2 h3 h4 h4" "h5 h2 h2 h6 h6 h7" "h8 h9 h10 h10 h11 h11" "h12 h13 h14 h14 h15 h16";
+}
+
+.honda-logo {
+  margin: 0 auto;
+  width: 70%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+}
+
+.hero-item:hover .product-image {
+  transform: scale(1.1);
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.hero-item {
+  text-align: center;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.hero-item p {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  padding-bottom: 35px;
+}
+.hero-item span {
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  border-bottom: 2px solid #fff !important;
+}
+.hero-item span::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  transform: translateY(-200%);
+  border-top: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-left: 20px solid #0283cc;
+  border-bottom: 20px solid transparent;
+  z-index: 99;
+}
+.hero-item span::before {
+  content: "";
+  position: absolute;
+  display: none;
+  left: -40px;
+  transform: translateY(-200%);
+  border-top: 20px solid transparent;
+  border-right: 20px solid #000;
+  border-left: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  z-index: 99;
+}
+
+.hero-item:first-child {
+  grid-area: h1;
+  background-color: #0283cc;
+  color: #fff;
+}
+.hero-item:first-child span::after {
+  display: inline;
+}
+.hero-item:first-child span::before {
+  display: none;
+}
+
+.hero-item:nth-child(2) {
+  grid-area: h2;
+}
+
+.hero-item:nth-child(3) {
+  grid-area: h3;
+  background-color: #cc0001;
+  color: #fff;
+}
+.hero-item:nth-child(3) span::after {
+  border-left: 20px solid #cc0001;
+}
+.hero-item:nth-child(3) span::before {
+  display: none;
+}
+
+.hero-item:nth-child(4) {
+  grid-area: h4;
+}
+
+.hero-item:nth-child(4) {
+  grid-area: h4;
+}
+
+.hero-item:nth-child(5) {
+  grid-area: h5;
+}
+.hero-item:nth-child(5) span {
+  border-bottom: 2px solid #000 !important;
+}
+.hero-item:nth-child(5) span::after {
+  border: none;
+}
+
+.hero-item:nth-child(6) {
+  grid-area: h6;
+}
+
+.hero-item:nth-child(7) {
+  grid-area: h7;
+  color: #fff;
+  background-color: #000;
+}
+.hero-item:nth-child(7) span::before {
+  display: block;
+}
+.hero-item:nth-child(7) span::after {
+  display: none;
+}
+
+.hero-item:nth-child(8) {
+  grid-area: h8;
+}
+
+.hero-item:nth-child(9) {
+  grid-area: h9;
+  background-color: #cc0001;
+  color: #fff;
+}
+.hero-item:nth-child(9) span::after {
+  border-left: 20px solid #cc0001;
+}
+
+.hero-item:nth-child(10) {
+  grid-area: h10;
+}
+
+.hero-item:nth-child(11) {
+  grid-area: h11;
+}
+
+.hero-item:nth-child(12) {
+  grid-area: h12;
+  color: #fff;
+  background-color: #cc0001;
+}
+.hero-item:nth-child(12) span::after {
+  border-left: 20px solid #cc0001;
+}
+
+.hero-item:nth-child(13) {
+  grid-area: h13;
+}
+
+.hero-item:nth-child(14) {
+  grid-area: h14;
+}
+
+.hero-item:nth-child(15) {
+  grid-area: h15;
+}
+.hero-item:nth-child(15) span::before {
+  display: block;
+  border-right: 20px solid #fff;
+}
+.hero-item:nth-child(15) span::after {
+  display: none;
+}
+
+.hero-item:last-child {
+  grid-area: h16;
+  background-color: #cc0001;
+}
+.hero-item:last-child span::after {
+  display: none;
+}
+
+.about-header {
+  text-align: center;
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  letter-spacing: 0.1em;
+  padding: 35px 0;
+}
+
+.about-lists {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.about-lists__item {
+  --collumn: 2;
+  width: calc(100% / var(--collumn)) !important;
+  padding-bottom: 30px !important;
+  text-align: center;
+  position: relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+  padding: 0 180px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.about-lists {
+  position: relative;
+}
+.about-lists h3 {
+  margin-top: 240px;
+  margin-bottom: 150px;
+  font-size: 1.3rem;
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  letter-spacing: 0.1em;
+}
+.about-lists p {
+  font-size: 0.7rem;
+}
+.about-lists a {
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  position: relative;
+  text-decoration: none;
+}
+.about-lists a:after {
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  content: "˃";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  right: 0%;
+  transform: translateX(70%);
+}
+
+.about-lists__item:first-child {
+  background-image: url(../img/about-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-lists__item:nth-child(2) {
+  background-image: url(../img/about-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-lists__item:nth-child(3) {
+  background-image: url(../img/about-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-lists__item:nth-child(4) {
+  background-image: url(../img/about-4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.history-header {
+  text-align: center;
+  position: relative;
+}
+.history-header h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  letter-spacing: 0.1em;
+  padding-top: 65px;
+  padding-bottom: 30px;
+}
+.history-header p {
+  font-size: 1rem;
+  color: #000;
+  width: 100%;
+  margin: 0 auto 18px;
+  line-height: 22px;
+}
+
+.history-header-title {
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-top: 0;
+  width: 600px;
+}
+.history-header-title h2 {
+  text-transform: uppercase;
+}
+.history-header-title a {
+  color: #000;
+  font-size: 1rem;
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  margin-bottom: 30px;
+  position: relative;
+  text-decoration: none;
+}
+.history-header-title a:after {
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  content: "˃";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  right: 0%;
+  transform: translateX(70%);
+}
+
+.collection {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 70px;
+}
+
+.collection-header {
+  text-align: center;
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  letter-spacing: 0.2em;
+  padding: 35px 0;
+}
+
+.collection-lists {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.collection-item {
+  --column: 3;
+  width: calc(100% / var(--column));
+  overflow: hidden;
+}
+
+.collection .collection-content {
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  height: 100%;
+}
+
+.collection-item .content-top {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.content-top:hover img {
+  transform: scale(1.1);
+}
+
+.collection-item .content-top img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: all 0.3s linear;
+}
+
+.collection .content-bottom {
+  padding: 0 30px;
+  padding-bottom: 80px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 17;
+}
+.collection .content-bottom:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid #f9f9f9;
+  border-right: 17px solid transparent;
+  border-left: 17px solid transparent;
+  z-index: 15;
+}
+
+.collection .content-bottom h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 0.8rem;
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.collection .content-bottom p {
+  text-align: center;
+  margin: 0;
+  font-size: 0.5rem;
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  margin-bottom: 20px;
+}
+
+.bottom {
+  margin-top: auto;
+}
+
+.collection .content-bottom a {
+  text-align: center;
+  margin: 0;
+  font-size: 0.6rem;
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  margin-bottom: 20px;
+  color: #337ab7;
+  position: relative;
+}
+
+.collection .content-bottom a::after {
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  content: "˃";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  right: 0%;
+  transform: translate(60%, 10%);
+}
+
+.content-layout {
+  position: relative;
+  cursor: pointer;
+}
+
+.content-layout:hover img {
+  transform: scale(1.1);
+}
+
+.content-layout img {
+  height: 100%;
+  transition: all 0.3s linear;
+}
+
+.instangram-logo {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  margin: 20px 20px;
+  font-size: 1.2rem;
+}
+
+.twitter-layout {
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+.wwut-content {
+  text-align: left !important;
+  padding: 120px 30px;
+  font-size: 0.7rem;
+}
+
+.wwut-twitter-avatar {
+  border-radius: 5px;
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  vertical-align: top;
+}
+
+.wwut-twiter-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.wwut-twiter-info a {
+  margin-right: 20px;
+  text-decoration: none;
+}
+.wwut-twiter-info a:focus,
+.wwut-twiter-info a:hover {
+  color: #23527c;
+}
+.wwut-twiter-info h3 {
+  font-size: 0.6rem;
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  color: #337ab7;
+}
+.wwut-twiter-info span {
+  font-size: 0.6rem;
+  font-family: "Avenir Next Cyr Light", sans-serif;
+}
+
+.wwut-twitter-copy {
+  font-size: 0.9rem;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+.wwut-twitter-copy a {
+  text-decoration: none;
+}
+.wwut-twitter-copy a:focus,
+.wwut-twitter-copy a:hover {
+  color: #23527c;
+}
+
+.wwut-twitter-time {
+  font-size: 0.5rem;
+}
+.wwut-twitter-time a {
+  text-decoration: none;
+}
+.wwut-twitter-time a:focus,
+.wwut-twitter-time a:hover {
+  color: #23527c;
+}
+
+.wwut-twitter-actions {
+  margin-top: 20px;
+  font-size: 0.6rem;
+  color: #8f8f8f;
+}
+.wwut-twitter-actions a {
+  color: #8f8f8f;
+  margin-right: 20px;
+  text-decoration: none;
+}
+.wwut-twitter-actions a:focus,
+.wwut-twitter-actions a:hover {
+  color: #23527c;
+}
+
+.wwut-twitter-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px 20px;
+}
+.wwut-twitter-icon i {
+  font-size: 1.2rem;
+  color: #0283cc;
+}
+
+.footer {
+  background-color: #eeeeee;
+  padding: 57px 0;
+}
+
+.row-1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+.row-1 h3 {
+  font-size: 0.7rem;
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  color: #8f8f8f;
+  margin-bottom: 20px;
+}
+.row-1 ul {
+  margin-bottom: 50px;
+}
+.row-1 li {
+  font-size: 0.6rem;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+.row-1 li a {
+  color: #000;
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+.row-1 li a span:after {
+  content: "˃";
+}
+.row-1 li a:hover {
+  color: #8f8f8f;
+}
+
+.footer-row__col {
+  padding-right: 40px !important;
+}
+
+.row-2 {
+  text-align: center;
+}
+.row-2 p {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.row-2 p a {
+  text-decoration: underline;
+  color: #0283cc;
+}
+.row-2 p a:hover {
+  color: #000;
+}
+
+.footer__social a {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  background-color: #000;
+  font-size: 16px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.2s;
+  margin-bottom: 30px;
+}
+.footer__social a:hover {
+  background-color: #4d4d4d;
+}
+
+.fa-snapchat {
+  color: #fff;
+}
+
+.final-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+}
+.final-links a {
+  color: #3e8ccf;
+  margin: 0 5px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.final-links a:hover {
+  color: #23527c;
+}
+
+footer .icon-chevron-right {
+  font-size: 13px;
+  margin: 2px 0 0 -2px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .header {
+    transform: translateX(-55px) scale(0.7);
+  }
+
+  .menu-link span {
+    display: none;
+  }
+
+  .nav-bars .left a,
+.nav-bars .right a {
+    display: none;
+  }
+
+  .header .nav-bars__item .search-bar {
+    margin-left: 15px;
+  }
+
+  .slider .carousel-indicators {
+    transform: translate(26%, -10%) !important;
+  }
+  .slider .carousel-indicators li {
+    margin-right: 5px;
+  }
+
+  .item {
+    padding: 20px !important;
+  }
+  .item span {
+    font-size: 0.5rem;
+  }
+  .item a {
+    font-size: 0.5rem;
+  }
+
+  .item__icon {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 100%;
+    text-align: center;
+    margin-right: 5px;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "h1 h1 h2 h2" "h3 h3 h4 h4" "h5 h5 h6 h6" "h7 h7 h8 h8" "h9 h9 h10 h10" "h11 h11 h12 h12" "h13 h13 h14 h14" "h15 h15 h16 h16";
+  }
+
+  .hero-item:nth-child(12) span::before {
+    display: block;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%) rotate(-90deg);
+    border-right: 20px solid #cc0001;
+  }
+
+  .hero-item:nth-child(13) {
+    grid-area: h14;
+  }
+
+  .hero-item:nth-child(14) {
+    grid-area: h13;
+  }
+
+  .hero-item:nth-child(15) span::before {
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(90deg);
+    border-right: 20px solid #fff;
+  }
+
+  .about-lists__item {
+    --collumn: 1;
+  }
+
+  .history-header-title h2 {
+    font-size: 0.8rem;
+    padding: 30px 0;
+  }
+  .history-header-title p {
+    font-size: 0.3rem;
+    line-height: 0;
+  }
+  .history-header-title a {
+    font-size: 0.4rem;
+  }
+
+  .history-header-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    width: 600px;
+  }
+
+  .collection-item {
+    --column: 1;
+  }
+
+  .row-1 {
+    flex-wrap: wrap;
+  }
+
+  .row-2 {
+    padding: 20px 40px;
+  }
+
+  .footer__social {
+    margin-bottom: 20px;
+  }
+
+  .footer__social a {
+    margin-bottom: 0;
+  }
+
+  .row-2 p a {
+    margin-bottom: 20px;
+  }
+
+  .sticky-menu {
+    left: -100%;
+  }
+
+  .run-menu {
+    left: -6%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

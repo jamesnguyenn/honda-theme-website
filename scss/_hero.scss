@@ -1,0 +1,182 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "h1 h2 h2 h3 h4 h4"
+    "h5 h2 h2 h6 h6 h7"
+    "h8 h9 h10 h10 h11 h11"
+    "h12 h13 h14 h14 h15 h16";
+}
+
+.honda-logo {
+  margin: 0 auto;
+  width: 70%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+}
+
+.hero-item:hover .product-image {
+  transform: scale(1.1);
+}
+.overflow {
+  overflow: hidden;
+}
+
+.hero-item {
+  text-align: center;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+
+  & p {
+    font-family: $primary-font-medium;
+    padding-bottom: 35px;
+  }
+  & span {
+    font-family: $primary-font-bold;
+    border-bottom: 2px solid #fff !important;
+  }
+  & span::after {
+    content: "";
+    position: absolute;
+    right: -40px;
+    transform: translateY(-200%);
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-left: 20px solid $blue-color;
+    border-bottom: 20px solid transparent;
+    z-index: 99;
+  }
+  & span::before {
+    content: "";
+    position: absolute;
+    display: none;
+    left: -40px;
+    transform: translateY(-200%);
+    border-top: 20px solid transparent;
+    border-right: 20px solid #000;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    z-index: 99;
+  }
+}
+
+// .item-1,
+// .item-5 {
+//   height: 170px;
+// }
+
+.hero-item:first-child {
+  grid-area: h1;
+  background-color: $blue-color;
+  color: #fff;
+  & span::after {
+    display: inline;
+  }
+  & span::before {
+    display: none;
+  }
+}
+
+.hero-item:nth-child(2) {
+  grid-area: h2;
+}
+.hero-item:nth-child(3) {
+  grid-area: h3;
+  background-color: $red-color;
+  color: #fff;
+  & span::after {
+    border-left: 20px solid $red-color;
+  }
+  & span::before {
+    display: none;
+  }
+}
+.hero-item:nth-child(4) {
+  grid-area: h4;
+}
+.hero-item:nth-child(4) {
+  grid-area: h4;
+}
+.hero-item:nth-child(5) {
+  grid-area: h5;
+  & span {
+    border-bottom: 2px solid #000 !important;
+  }
+  & span::after {
+    border: none;
+  }
+}
+.hero-item:nth-child(6) {
+  grid-area: h6;
+}
+.hero-item:nth-child(7) {
+  grid-area: h7;
+  color: #fff;
+  background-color: #000;
+  & span::before {
+    display: block;
+  }
+  & span::after {
+    display: none;
+  }
+}
+.hero-item:nth-child(8) {
+  grid-area: h8;
+}
+.hero-item:nth-child(9) {
+  grid-area: h9;
+  background-color: $red-color;
+  color: #fff;
+  & span::after {
+    border-left: 20px solid $red-color;
+  }
+}
+.hero-item:nth-child(10) {
+  grid-area: h10;
+}
+.hero-item:nth-child(11) {
+  grid-area: h11;
+}
+.hero-item:nth-child(12) {
+  grid-area: h12;
+  color: #fff;
+  background-color: $red-color;
+  & span::after {
+    border-left: 20px solid $red-color;
+  }
+}
+.hero-item:nth-child(13) {
+  grid-area: h13;
+}
+.hero-item:nth-child(14) {
+  grid-area: h14;
+}
+.hero-item:nth-child(15) {
+  grid-area: h15;
+  & span::before {
+    display: block;
+    border-right: 20px solid #fff;
+  }
+  & span::after {
+    display: none;
+  }
+}
+.hero-item:last-child {
+  grid-area: h16;
+  background-color: $red-color;
+  & span::after {
+    display: none;
+  }
+}
