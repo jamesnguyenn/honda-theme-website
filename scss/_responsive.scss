@@ -1,7 +1,7 @@
 @media screen and (max-width: 767.98px) {
-  // .header {
-  //   transform: translateX(-55px) scale(0.7);
-  // }
+  .header {
+    padding: 15px;
+  }
 
   .menu-link span {
     display: none;
@@ -124,6 +124,12 @@
     left: -100%;
   }
   .run-menu {
-    left: 0%;
+    left: -0px;
+  }
+  .nav-bars {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
