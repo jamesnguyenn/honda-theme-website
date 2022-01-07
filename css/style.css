@@ -935,10 +935,6 @@ footer .icon-chevron-right {
 }
 
 @media screen and (max-width: 767.98px) {
-  .header {
-    transform: translateX(-55px) scale(0.7);
-  }
-
   .menu-link span {
     display: none;
   }
@@ -991,6 +987,9 @@ footer .icon-chevron-right {
     left: 50%;
     transform: translate(-50%, 100%) rotate(-90deg);
     border-right: 20px solid #cc0001;
+  }
+  .hero-item:nth-child(12) span::after {
+    display: none;
   }
 
   .hero-item:nth-child(13) {

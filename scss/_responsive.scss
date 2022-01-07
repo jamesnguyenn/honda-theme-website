@@ -1,7 +1,7 @@
 @media screen and (max-width: 767.98px) {
-  .header {
-    transform: translateX(-55px) scale(0.7);
-  }
+  // .header {
+  //   transform: translateX(-55px) scale(0.7);
+  // }
   .menu-link span {
     display: none;
   }
@@ -57,6 +57,9 @@
       left: 50%;
       transform: translate(-50%, 100%) rotate(-90deg);
       border-right: 20px solid $red-color;
+    }
+    & span::after {
+      display: none;
     }
   }
   .hero-item:nth-child(13) {
