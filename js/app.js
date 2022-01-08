@@ -1,12 +1,16 @@
 //Selector
 let $ = document.querySelector.bind(document);
 let $$ = document.querySelectorAll.bind(document);
-const menu = $(".menu-link");
+const link = $(".menu-link");
 const sticky = $(".sticky-menu ");
+const icon = $(".menu-sticky-logo");
 console.log(sticky);
 //Listener
-menu.addEventListener("click", () => {
+link.addEventListener("click", () => {
   sticky.classList.toggle("run-menu");
+});
+link.addEventListener("click", () => {
+  icon.classList.toggle("menu-sticky-cancel-active");
 });
 menu.addEventListener("click", noScroll);
 

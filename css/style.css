@@ -49,7 +49,7 @@ hr {
   width: 350px;
   height: 100vh;
   background-color: #fff;
-  transition: all 0.4s linear;
+  transition: all 0.2s linear;
 }
 .sticky-menu ul li {
   font-family: "Avenir Next Cyr Medium", sans-serif;
@@ -118,6 +118,46 @@ hr {
   width: 35px;
   height: 35px;
   margin-left: 60px;
+}
+
+.menu-link .menu-sticky-logo {
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.menu-link .menu-sticky-logo::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+  transform: translateY(-6px) rotate(0);
+  transition: all 0.2s linear;
+}
+.menu-link .menu-sticky-logo::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+  transform: translateY(6px) rotate(0);
+  transition: all 0.3s linear;
+}
+
+.menu-link .menu-sticky-cancel-active {
+  background-color: transparent;
+}
+.menu-link .menu-sticky-cancel-active::before {
+  transform: translateY(0) rotate(45deg);
+}
+.menu-link .menu-sticky-cancel-active::after {
+  transform: translateY(0) rotate(-45deg);
 }
 
 .items {

@@ -12,7 +12,7 @@
   width: 350px;
   height: 100vh;
   background-color: #fff;
-  transition: all 0.4s linear;
+  transition: all 0.2s linear;
   & ul li {
     font-family: $primary-font-medium;
     font-size: 0.6rem;
@@ -76,4 +76,44 @@
   width: 35px;
   height: 35px;
   margin-left: 60px;
+}
+
+.menu-link .menu-sticky-logo {
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(-6px) rotate(0);
+    transition: all 0.2s linear;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+
+    transform: translateY(6px) rotate(0);
+    transition: all 0.3s linear;
+  }
+}
+.menu-link .menu-sticky-cancel-active {
+  background-color: transparent;
+  &::before {
+    transform: translateY(0) rotate(45deg);
+  }
+  &::after {
+    transform: translateY(0) rotate(-45deg);
+  }
 }
