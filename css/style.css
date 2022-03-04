@@ -36,6 +36,11 @@ hr {
 .header {
   padding: 15px 25px;
   background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1030;
 }
 
 .search-bar {
