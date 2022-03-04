@@ -118,7 +118,7 @@ hr {
 }
 
 .header .nav-bars__item .search-bar {
-  background: url(../img/icons.webp) 0 0px;
+  background: url(../img/icons.webp) 5px 0px;
   display: inline-block;
   width: 35px;
   height: 35px;
